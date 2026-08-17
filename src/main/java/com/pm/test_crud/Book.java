@@ -21,18 +21,17 @@ public class Book {
     Long id;
     String title;
     Float price;
-
+    String author;
     @CreationTimestamp
     LocalDateTime createdAt;
 
     @UpdateTimestamp
     LocalDateTime updatedAt;
 
-    public Book(String title, Float price, LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public Book(String title, Float price, String author) {
         this.title = title;
         this.price = price;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
+        this.author=author;
     }
 
     @Override
